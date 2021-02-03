@@ -1,10 +1,14 @@
 require './game'
 require './player'
-require './turn'
+require './question'
 
 # Eg Prompt
 
 =begin
+
+run a while loop 
+process.exit < ruby t
+
 
 Player 1: What does 5 plus 3 equal?
 > 9
@@ -35,4 +39,9 @@ Isolate your I/O logic to one or two classes. Don't allow all your classes to in
 Remember to build incrementally, writing small amounts of runnable code instead of writing out a whole bunch of classes/methods that are not yet testable/runnable.
 Use puts, raise some_val.inspect, and byebug to help with debugging
 
+=end
+
+=begin
+
+game will check if either of the players have a score of 0, if they don't then the game will produce a new question. 
 =end

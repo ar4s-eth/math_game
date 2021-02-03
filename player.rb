@@ -1,6 +1,5 @@
 class Player
-  attr_reader :name
-  attr_writer :lives
+  attr_accessor :name, :lives
 
   def initialize(name)
     @name = name
@@ -16,9 +15,3 @@ class Player
   end
 
 end
-
-player_1 = Player.new("Player 1")
-
-# player_1.wrong_answer
-# puts player_1.get_lives
-# puts player_1.name

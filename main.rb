@@ -1,5 +1,5 @@
-require './game'
 require './player'
+require './game'
 require './question'
 
 # Eg Prompt

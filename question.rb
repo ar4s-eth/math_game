@@ -19,6 +19,7 @@ class Question
     }
      
     operator = operators[operatorRand.to_s]
+    
     self.question = "What is #{first} #{operator} #{second}?"
     self.answer = eval("#{first} #{operator} #{second}")
   end

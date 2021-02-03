@@ -1,10 +1,10 @@
 class Question
-  attr_accessor :question, :answer
-  # attr_reader :answer
-  
+  attr_accessor :question, :answer, :user_answer
+
   def initialize
     @question = ''
     @answer = ''
+    @user_answer = ''
   end
   
   def new_question
@@ -20,7 +20,7 @@ class Question
      
     operator = operators[operatorRand.to_s]
     
-    self.question=("What is #{first} #{operator} #{second}?")
+    # self.question=("What is #{first} #{operator} #{second}?")
 
     @question = 'something'
 
@@ -28,9 +28,18 @@ class Question
     self.answer = eval("#{first} #{operator} #{second}")
 
   end
+
+  # def get_user_answer
+  #   self.user_answer = gets.chomp
+  # end
   
   def is_correct?(input)
-    self.answer == input
+    input = gets.chomp.to_i
+    if self.answer == input
+      puts "That's correct!"
+    else
+      puts "You're so wrong"
+    end
   end
 end
 
@@ -38,7 +47,4 @@ q = Question.new
 q.new_question
 puts q.question
 puts q.answer
-
-# inputFromUser = chompthing
-
-# q.is_correct?(inputFromUser)
+q.is_correct?

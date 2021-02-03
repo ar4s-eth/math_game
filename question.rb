@@ -19,21 +19,11 @@ class Question
     }
      
     operator = operators[operatorRand.to_s]
-    
-    # self.question=("What is #{first} #{operator} #{second}?")
-
-    @question = 'something'
-
     self.question = "What is #{first} #{operator} #{second}?"
     self.answer = eval("#{first} #{operator} #{second}")
-
   end
-
-  # def get_user_answer
-  #   self.user_answer = gets.chomp
-  # end
   
-  def is_correct?(input)
+  def is_correct?
     input = gets.chomp.to_i
     if self.answer == input
       puts "That's correct!"

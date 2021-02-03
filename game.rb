@@ -2,10 +2,11 @@
 require './player'
 
 class Game
-  attr_accessor :p1
+  attr_accessor :p1, :first_player
   def initialize
     @p1 = Player.new("Player 1")
     @p2 = Player.new("Player 2")
+    @first_player = [@p1, @p2].sample
   end
   
   def fetch_question
@@ -20,4 +21,4 @@ class Game
 end
 
 go = Game.new
-puts go.p1.name
+puts go.first_player.name
